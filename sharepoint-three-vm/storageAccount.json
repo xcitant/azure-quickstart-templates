@@ -17,12 +17,12 @@
         "Premium_LRS",
         "Standard_LRS",
         "Standard_GRS",
-				"StandardSSD_LRS"
+	"StandardSSD_LRS"
       ],
       "metadata": {
         "Description": "The type of the Storage Account created"
       },
-      "defaultValue": "StandardSSD_LRS"
+      "defaultValue": "Premium_LRS"
     }
   },
   "resources": [
