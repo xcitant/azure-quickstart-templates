@@ -16,19 +16,20 @@
       "allowedValues": [
         "Premium_LRS",
         "Standard_LRS",
-        "Standard_GRS"
+        "Standard_GRS",
+				"StandardSSD_LRS"
       ],
       "metadata": {
         "Description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "StandardSSD_LRS"
     }
   },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(parameters('storageAccountNamePrefix'),'1')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2018-05-01",
       "location": "[parameters('location')]",
       "properties": {
         "accountType": "[parameters('storageAccountType')]"
@@ -37,7 +38,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(parameters('storageAccountNamePrefix'),'2')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2018-05-01",
       "location": "[parameters('location')]",
       "properties": {
         "accountType": "Standard_LRS"
